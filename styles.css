@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font: 16px/1.8 Roboto, sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Archivo", sans-serif;
+}
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.5em;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.captioned-image {
+  width: 50%;
+  float: left;
+}
+.captioned-image img {
+  width: 100%;
+  display: block;
+}
+.captioned-image p {
+  text-align: center;
+  font-size: 0.9em;
+}
+.description {
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+  text-align: justify;
+}
+.img-right {
+  float: right;
+}
+.description-right {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* header */
+#header {
+  background-color: black;
+  overflow: hidden;
+  padding: 10px 15px;
+  width: 100%;
+  z-index: 1;
+}
+#branding {
+  float: left;
+}
+#logo {
+  width: 30px;
+}
+#navbar {
+  float: right;
+  margin-top: 7px;
+}
+#navbar ul {
+  list-style-type: none;
+}
+#navbar li {
+  display: inline;
+}
+#navbar a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 10px;
+  color: white;
+  position: relative;
+}
+#navbar a::after {
+  content: "";
+  width: 100%;
+  height: 0.7px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-in;
+}
+#navbar a:hover::after {
+  transform: scaleX(1);
+}
+#header::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* banner */
+#banner {
+  height: 100vh;
+  background: url("./images/banner.jpg") center/cover no-repeat fixed;
+}
+#banner .container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+#banner-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+#banner-text p {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+.highlight {
+  color: #f24333;
+}
+
+#who,
+#early-life,
+#boxing-career,
+#world-titles {
+  padding-top: 70px;
+}
+
+#personal-life {
+  padding: 70px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* boxing career*/
+#boxing-career h2 {
+  margin-bottom: -5px;
+}
+#boxing-career ul {
+  text-align: justify;
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
+/* world titles */
+#world-titles h2 > a {
+  color: #f24333;
+  text-decoration: none;
+}
+#world-titles #table-container {
+  overflow-x: auto;
+}
+#world-titles td,
+#world-titles th {
+  min-width: 150px;
+}
+#world-titles table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#world-titles thead {
+  background-color: #f24333;
+  color: white;
+  text-transform: uppercase;
+}
+#world-titles thead th {
+  padding: 5px;
+}
+#world-titles tbody td {
+  border: 0.1px solid #bbb;
+  padding: 5px;
+  text-align: center;
+}
+#world-titles tbody tr:first-child td {
+  border-top: none;
+}
+
+/* footer */
+#footer {
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #231f20;
+  color: white;
+}
+.scroll-top {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  color: white;
+  background-color: #231f20;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 100%;
+}
+
+/* mobile styles */
+@media all and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    width: 90%;
+  }
+  .captioned-image,
+  .description {
+    display: block;
+    width: 100%;
+  }
+  .description {
+    margin-top: 10px;
+    padding: 0;
+  }
+  #who,
+  #early-life,
+  #boxing-career,
+  #world-titles {
+    padding-top: 50px;
+  }
+
+  #personal-life {
+    padding: 50px 0;
+  }
+  #boxing-career p {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* header */
+  #header .container {
+    width: 100%;
+  }
+  #header {
+    padding: 0;
+  }
+  #branding {
+    margin-top: 10px;
+  }
+  h2 {
+    text-align: center;
+    line-height: 1.4;
+  }
+  #branding,
+  #navbar {
+    float: none;
+    text-align: center;
+  }
+  #navbar a {
+    display: block;
+    padding: 10px;
+  }
+  #navbar a:hover {
+    background-color: #181616;
+  }
+  #navbar a:hover::after {
+    transform: scaleX(0);
+  }
+
+  /* banner */
+  #banner {
+    background: url("./images/pacman-in-hood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #banner-text {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #banner-text h1 {
+    line-height: 1.2;
+  }
+  #banner-text p {
+    font-size: 1.4em;
+    margin-top: 10px;
+  }
+  #footer {
+    padding: 20px 45px;
+  }
+  .scroll-top {
+    bottom: 50px;
+  }
+}
